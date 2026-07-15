@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crown Pharmacy — Triplicane, Chennai</title>
+<meta name="description" content="Crown Pharmacy, Triplicane, Chennai. OTC medicines, skin & hair care, order via WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#0B6E4F;
+    --green-dark:#084F39;
+    --blue:#1C6FA8;
+    --blue-dark:#124F79;
+    --gold:#B8912F;
+    --paper:#F6FAF8;
+    --paper-2:#EEF5F1;
+    --ink:#123028;
+    --ink-soft:#3C574F;
+    --line:#D8E6DF;
+    --white:#FFFFFF;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(10,60,45,0.10);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Public Sans',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.55;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--green-dark);
+    margin:0 0 .4em;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .eyebrow{
+    font-family:'Public Sans',sans-serif;
+    text-transform:uppercase;
+    font-size:12.5px;
+    letter-spacing:.14em;
+    font-weight:700;
+    color:var(--blue-dark);
+    display:flex;align-items:center;gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1.5px;background:var(--gold);display:inline-block;}
+  section{padding:88px 0;}
+  @media (max-width:640px){ section{padding:56px 0;} }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(246,250,248,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;max-width:1160px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .brand svg{width:34px;height:34px;flex-shrink:0;}
+  .brand-name{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--green-dark);line-height:1;}
+  .brand-sub{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-dark);font-weight:600;}
+  nav.links{display:flex;gap:30px;align-items:center;}
+  nav.links a{
+    text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:14.5px;
+    position:relative;padding:4px 0;
+  }
+  nav.links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--gold);
+    transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--green);color:var(--white)!important;
+    padding:10px 18px;border-radius:30px;font-size:14px;font-weight:700;
+    display:flex;align-items:center;gap:8px;text-decoration:none;
+    box-shadow:var(--shadow);
+  }
+  .nav-cta:hover{background:var(--green-dark);}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;padding:6px;}
+  .menu-btn svg{width:26px;height:26px;color:var(--green-dark);}
+  @media (max-width:860px){
+    nav.links{
+      position:fixed;top:64px;left:0;right:0;background:var(--white);
+      flex-direction:column;gap:0;border-bottom:1px solid var(--line);
+      transform:translateY(-140%);transition:transform .3s ease;
+      padding:8px 0;
+    }
+    nav.links.open{transform:translateY(0);}
+    nav.links a{width:100%;padding:14px 24px;border-bottom:1px solid var(--paper-2);}
+    nav.links a::after{display:none;}
+    .nav-cta{margin:14px 24px;justify-content:center;}
+    .menu-btn{display:block;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#0B6E4F 0%,#0E5E76 100%);
+    color:var(--white);
+    padding:100px 0 120px;
+  }
+  .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+  @media (max-width:900px){ .hero .wrap{grid-template-columns:1fr;} .hero{padding:70px 0 90px;} }
+  .hero-crown{position:absolute;opacity:.10;right:-60px;top:-60px;width:520px;height:520px;}
+  .hero .eyebrow{color:#CFEFE0;}
+  .hero .eyebrow::before{background:#E8C766;}
+  .hero h1{
+    color:var(--white);font-size:clamp(34px,4.6vw,54px);line-height:1.08;
+    max-width:12ch;
+  }
+  .hero p.lead{
+    font-size:17px;color:#DCEFE7;max-width:46ch;margin:18px 0 30px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:14px 24px;border-radius:30px;font-weight:700;font-size:15px;
+    text-decoration:none;border:1.5px solid transparent;cursor:pointer;
+    transition:transform .18s ease, background .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-gold{background:#E8C766;color:#1E3B2F;}
+  .btn-gold:hover{background:#F0D583;}
+  .btn-outline{border-color:rgba(255,255,255,.55);color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,.12);}
+  .btn-primary{background:var(--green);color:var(--white);}
+  .btn-primary:hover{background:var(--green-dark);}
+  .hero-card{
+    background:var(--white);color:var(--ink);border-radius:var(--radius);
+    padding:26px;box-shadow:0 20px 50px rgba(0,0,0,.25);
+  }
+  .hero-card h3{font-size:16px;margin-bottom:14px;color:var(--green-dark);}
+  .hero-stat{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--line);font-size:14.5px;}
+  .hero-stat:last-child{border-bottom:none;}
+  .hero-stat b{color:var(--blue-dark);}
+
+  /* ---------- Marquee strip ---------- */
+  .strip{
+    background:var(--paper-2);border-bottom:1px solid var(--line);border-top:1px solid var(--line);
+    padding:14px 0;
+  }
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:26px;justify-content:center;font-size:13.5px;font-weight:600;color:var(--ink-soft);}
+  .strip span{display:flex;align-items:center;gap:8px;}
+  .strip svg{width:16px;height:16px;color:var(--green);}
+
+  /* ---------- Section titles ---------- */
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(26px,3.4vw,36px);}
+  .section-head p{color:var(--ink-soft);font-size:15.5px;}
+
+  /* ---------- Services ---------- */
+  .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  @media (max-width:960px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{
+    background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+    padding:26px 22px;transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .service-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+  .service-icon{
+    width:46px;height:46px;border-radius:12px;background:var(--paper-2);
+    display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+  }
+  .service-icon svg{width:24px;height:24px;color:var(--green);}
+  .service-card h3{font-size:17px;margin-bottom:8px;}
+  .service-card p{font-size:14px;color:var(--ink-soft);margin:0;}
+
+  /* ---------- Shop ---------- */
+  .shop{background:var(--paper-2);}
+
+  /* --- Order builder (step form + order summary) --- */
+  .shop-builder{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin-bottom:48px;
+    align-items:start;
+  }
+  @media (max-width:900px){ .shop-builder{grid-template-columns:1fr;} }
+
+  .builder-card, .order-card{
+    background:var(--green-dark);color:var(--white);border-radius:var(--radius);
+    padding:28px;box-shadow:var(--shadow);
+  }
+  .builder-card{position:relative;}
+  .step{margin-bottom:26px;position:relative;z-index:1;}
+  .step.step-product{z-index:6;}
+  .step:last-of-type{margin-bottom:22px;}
+  .step-label{
+    font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;
+    color:#CFEFE0;margin-bottom:10px;
+  }
+  .product-select-wrap{position:relative;}
+  .product-select-wrap input{
+    width:100%;padding:14px 44px 14px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(0,0,0,.18);color:var(--white);font-size:15px;outline:none;
+    font-family:'Public Sans',sans-serif;
+  }
+  .product-select-wrap input::placeholder{color:#9FC2B7;}
+  .product-select-wrap input:focus{border-color:var(--gold);}
+  .product-select-wrap .sel-icon{
+    position:absolute;right:14px;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;color:#7FD8AE;pointer-events:none;
+  }
+  .suggestions{
+    position:absolute;top:calc(100% + 6px);left:0;right:0;z-index:50;
+    background:var(--white);border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.28);
+    max-height:280px;overflow-y:auto;display:none;
+  }
+  .suggestions.open{display:block;}
+  .suggestion-item{
+    padding:12px 16px;cursor:pointer;display:flex;justify-content:space-between;gap:10px;
+    color:var(--ink);font-size:14px;border-bottom:1px solid var(--paper-2);
+  }
+  .suggestion-item:last-child{border-bottom:none;}
+  .suggestion-item:hover{background:var(--paper-2);}
+  .suggestion-item b{color:var(--blue-dark);font-weight:700;font-size:13px;white-space:nowrap;}
+  .suggestion-empty{padding:14px 16px;color:var(--ink-soft);font-size:13.5px;}
+
+  .selected-chip{
+    margin-top:10px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+    border-radius:10px;padding:10px 14px;font-size:13.5px;display:none;
+  }
+  .selected-chip.show{display:flex;}
+  .selected-chip b{font-weight:700;}
+  .selected-chip .chip-price{color:#E8C766;font-weight:700;}
+
+  .qty-stepper{display:flex;align-items:center;gap:16px;}
+  .qty-btn{
+    width:44px;height:44px;border-radius:10px;border:none;cursor:pointer;
+    font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center;
+    transition:transform .12s ease;
+  }
+  .qty-btn:active{transform:scale(.94);}
+  .qty-btn.minus{background:rgba(255,255,255,.1);color:var(--white);}
+  .qty-btn.minus:hover{background:rgba(255,255,255,.18);}
+  .qty-btn.plus{background:var(--gold);color:#1E3B2F;}
+  .qty-btn.plus:hover{background:#CBA23C;}
+  .qty-value{font-size:19px;font-weight:700;min-width:24px;text-align:center;}
+
+  .add-product-btn{
+    width:100%;border:none;border-radius:30px;padding:16px 20px;font-size:15.5px;font-weight:700;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(90deg,#8A6A22,var(--gold));color:#241C08;
+    transition:filter .15s ease;
+  }
+  .add-product-btn:hover{filter:brightness(1.08);}
+  .add-product-btn:disabled{opacity:.5;cursor:not-allowed;filter:none;}
+
+  .order-card h3{color:var(--white);font-size:20px;margin-bottom:6px;}
+  .order-empty{color:#9FC2B7;font-size:14px;margin-bottom:18px;}
+  .order-list{margin-bottom:16px;display:flex;flex-direction:column;gap:10px;}
+  .order-item{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:rgba(255,255,255,.06);border-radius:10px;padding:11px 14px;font-size:13.5px;
+  }
+  .order-item-name{font-weight:600;line-height:1.3;}
+  .order-item-meta{color:#9FC2B7;font-size:12px;margin-top:2px;}
+  .order-item-remove{
+    background:none;border:none;color:#E9A5A5;cursor:pointer;font-size:17px;line-height:1;
+    flex-shrink:0;padding:4px;
+  }
+  .order-item-remove:hover{color:#FF6B6B;}
+  .order-total{
+    display:none;align-items:center;justify-content:space-between;
+    padding:14px 4px;margin-bottom:16px;border-top:1px dashed rgba(255,255,255,.22);
+    font-size:15px;font-weight:700;color:var(--white);
+  }
+  .order-total.show{display:flex;}
+  .order-total #orderTotalValue{color:#E8C766;font-size:18px;}
+
+  .field-input, .field-select{
+    width:100%;padding:13px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.06);color:var(--white);font-size:14.5px;outline:none;
+    font-family:'Public Sans',sans-serif;margin-bottom:12px;
+  }
+  .field-input::placeholder{color:#9FC2B7;}
+  .field-input:focus, .field-select:focus{border-color:var(--gold);}
+  .field-select{appearance:none;-webkit-appearance:none;cursor:pointer;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239FC2B7' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");
+    background-repeat:no-repeat;background-position:right 14px center;background-size:16px;
+  }
+  .field-select option{color:var(--ink);}
+
+  .send-order-btn{
+    width:100%;border:none;border-radius:30px;padding:16px 20px;font-size:15.5px;font-weight:700;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(90deg,var(--green),var(--blue));color:var(--white);
+    text-decoration:none;margin-top:4px;transition:filter .15s ease, opacity .15s ease;
+  }
+  .send-order-btn:hover{filter:brightness(1.08);}
+  .send-order-btn.disabled{opacity:.5;pointer-events:none;}
+  .clear-selection-btn{
+    display:block;width:100%;text-align:center;background:none;border:none;
+    color:#9FC2B7;font-size:13px;padding:12px 0 0;cursor:pointer;font-weight:600;
+  }
+  .clear-selection-btn:hover{color:var(--white);}
+
+  /* ---------- About ---------- */
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  @media (max-width:860px){ .about .wrap{grid-template-columns:1fr;} }
+  .about-visual{
+    background:linear-gradient(150deg,var(--green) 0%,var(--blue) 100%);
+    border-radius:var(--radius);padding:44px;color:var(--white);position:relative;overflow:hidden;
+    min-height:320px;display:flex;flex-direction:column;justify-content:center;
+  }
+  .about-visual svg{width:120px;height:120px;opacity:.9;margin-bottom:18px;}
+  .about-visual .quote{font-family:'Fraunces',serif;font-size:20px;line-height:1.4;max-width:24ch;}
+  .about-body p{color:var(--ink-soft);font-size:15.5px;margin-bottom:16px;}
+  .about-list{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;}
+  .about-list li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--ink);}
+  .about-list svg{width:20px;height:20px;color:var(--green);flex-shrink:0;margin-top:1px;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--green-dark);color:var(--white);}
+  .contact .eyebrow{color:#CFEFE0;}
+  .contact .eyebrow::before{background:#E8C766;}
+  .contact h2{color:var(--white);}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  @media (max-width:860px){ .contact .wrap{grid-template-columns:1fr;} }
+  .contact-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+    border-radius:var(--radius);padding:26px;margin-bottom:16px;
+  }
+  .contact-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
+  .contact-row:last-child{margin-bottom:0;}
+  .contact-row svg{width:22px;height:22px;color:#E8C766;flex-shrink:0;margin-top:2px;}
+  .contact-row h4{margin:0 0 4px;font-size:14.5px;font-weight:700;color:var(--white);font-family:'Public Sans',sans-serif;}
+  .contact-row p{margin:0;font-size:14.5px;color:#D8ECE2;}
+  .map-frame{border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.14);height:100%;min-height:340px;}
+  .map-frame iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
+
+  /* ---------- Footer ---------- */
+  footer{background:#082A21;color:#B9D6C9;padding:34px 0;font-size:13.5px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+  footer a{color:#E8C766;text-decoration:none;}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed;bottom:22px;right:22px;z-index:60;
+    background:#1EBE5D;color:var(--white);width:58px;height:58px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(0,0,0,.25);
+    text-decoration:none;
+  }
+  .float-wa svg{width:28px;height:28px;}
+  .float-wa:hover{background:#17a34e;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#home" class="brand">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 34L9 16L18 25L24 10L30 25L39 16L42 34H6Z" stroke="#0B6E4F" stroke-width="2.6" stroke-linejoin="round" fill="#EEF5F1"/>
+        <circle cx="9" cy="16" r="2.4" fill="#B8912F"/>
+        <circle cx="24" cy="10" r="2.4" fill="#B8912F"/>
+        <circle cx="39" cy="16" r="2.4" fill="#B8912F"/>
+        <rect x="6" y="34" width="36" height="4" rx="1.5" fill="#1C6FA8"/>
+      </svg>
+      <span>
+        <div class="brand-name">Crown Pharmacy</div>
+        <div class="brand-sub">Triplicane · Chennai</div>
+      </span>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <a class="nav-cta" href="https://wa.me/919884094476?text=Hi%20Crown%20Pharmacy%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.22 8.22 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.84 2.42 8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.26 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.68 4.25 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+        WhatsApp Order
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <svg class="hero-crown" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 34L9 16L18 25L24 10L30 25L39 16L42 34H6Z" stroke="#FFFFFF" stroke-width="1.4" stroke-linejoin="round"/>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Trusted Neighbourhood Pharmacy</div>
+      <h1>Your health, sorted — just a WhatsApp message away.</h1>
+      <p class="lead">Crown Pharmacy in Triplicane stocks everyday OTC medicines, skin & hair care essentials, and wellness products. Browse the full list and order directly on WhatsApp — no app, no login.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-gold">Browse the Shop</a>
+        <a href="https://wa.me/919884094476?text=Hi%20Crown%20Pharmacy%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-outline">Order via WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Store at a glance</h3>
+      <div class="hero-stat"><span>Products available</span><b>429+ items</b></div>
+      <div class="hero-stat"><span>Location</span><b>Triplicane, Chennai</b></div>
+      <div class="hero-stat"><span>Clinic Name</span><b>Al Safa Polyclinic / Al Safa Skin Hair Clinic</b></div>
+      <div class="hero-stat"><span>Mon–Sat</span><b>6:30 – 10:30 PM</b></div>
+      <div class="hero-stat"><span>Sunday</span><b>7:30 – 10:30 PM (Emergency)</b></div>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> OTC Medicines Only</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Order on WhatsApp</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Skin, Hair & Wellness Care</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Opposite Star Medical, Triplicane</span>
+  </div>
+</div>
+
+<section id="shop" class="shop">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Shop</div>
+      <h2>Build your order</h2>
+      <p>Search a product, set the quantity and add it to your order. When you're done, send the whole list to us on WhatsApp.</p>
+    </div>
+
+    <div class="shop-builder">
+      <div class="builder-card">
+        <div class="step step-product">
+          <div class="step-label">1. Product</div>
+          <div class="product-select-wrap">
+            <input type="text" id="productSelect" placeholder="Search a product, e.g. Dolo, Cetalore..." autocomplete="off">
+            <svg class="sel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <div class="suggestions" id="productSuggestions"></div>
+          </div>
+          <div class="selected-chip" id="selectedChip">
+            <span>Selected: <b id="selectedChipName"></b></span>
+            <span class="chip-price" id="selectedChipPrice"></span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-label">2. Quantity</div>
+          <div class="qty-stepper">
+            <button type="button" class="qty-btn minus" id="qtyMinus">−</button>
+            <span class="qty-value" id="qtyValue">1</span>
+            <button type="button" class="qty-btn plus" id="qtyPlus">+</button>
+          </div>
+        </div>
+        <button type="button" class="add-product-btn" id="addProductBtn" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" width="16" height="16"><path d="M12 5v14M5 12h14"/></svg>
+          Add Product
+        </button>
+      </div>
+
+      <div class="order-card">
+        <h3>Your Order</h3>
+        <div class="order-empty" id="orderEmpty">No items selected yet. Use + to add products.</div>
+        <div class="order-list" id="orderList"></div>
+        <div class="order-total" id="orderTotal">
+          <span>Total</span>
+          <span id="orderTotalValue">₹0</span>
+        </div>
+
+        <input type="text" class="field-input" id="patientNameInput" placeholder="Patient Name (optional)">
+        <input type="tel" class="field-input" id="mobileInput" placeholder="Mobile Number (optional)">
+
+        <a href="#" target="_blank" rel="noopener" class="send-order-btn disabled" id="sendOrderBtn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.22 8.22 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.84 2.42 8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.26 8.23z"/></svg>
+          Send Order via WhatsApp
+        </a>
+        <button type="button" class="clear-selection-btn" id="clearOrderBtn">Clear selection</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="about-visual">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 34L9 16L18 25L24 10L30 25L39 16L42 34H6Z" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div class="quote">"Care that knows your street, your name, your usual order."</div>
+    </div>
+    <div class="about-body">
+      <div class="eyebrow">About Us</div>
+      <h2>Part of the neighbourhood, not just a shop in it</h2>
+      <p>Crown Pharmacy has been serving the Triplicane community from Dr. Natesan Road, Krishnampet — right opposite Star Medical. We focus on OTC medicines and skin & hair care essentials, kept simple and always within reach.</p>
+      <p>No queues, no confusing apps — just search what you need and send it to us on WhatsApp. We'll confirm availability and have it ready for pickup.</p>
+      <ul class="about-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 429+ OTC products across everyday medicine, skin & hair care</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Open 7 days a week, with Sunday emergency hours</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Simple WhatsApp ordering — no account required</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Services</div>
+      <h2>How Crown Pharmacy helps you</h2>
+      <p>From everyday tablets to specialised skin & hair formulations, we keep the shelves stocked and the ordering simple.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.5L3.5 13.5a5 5 0 0 1 7.07-7.07l1.43 1.43 1.43-1.43a5 5 0 0 1 7.07 7.07l-7 7a2 2 0 0 1-2.83 0z"/><path d="M9 12h6M12 9v6"/></svg></div>
+        <h3>OTC Medicines</h3>
+        <p>A wide range of everyday over-the-counter medicines, always in stock.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg></div>
+        <h3>Skin & Hair Care</h3>
+        <p>Dermat-recommended creams, lotions, serums and hair care formulations.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/></svg></div>
+        <h3>WhatsApp Ordering</h3>
+        <p>Pick your items, tap order — your list lands straight in our WhatsApp inbox.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+        <h3>Health Guidance</h3>
+        <p>Friendly, informed advice at the counter — no appointment needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Visit us or send a message</h2>
+      <div class="contact-card">
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <h4>Address</h4>
+            <p>No.234, Dr. Natesan Road, Krishnampet, Triplicane, Chennai – 600005 (Opposite Star Medical)</p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <h4>Phone / WhatsApp</h4>
+            <p><a href="tel:+919884094476" style="color:#D8ECE2;">+91 98840 94476</a></p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:alsafaskinhairclinic@gmail.com" style="color:#D8ECE2;">alsafaskinhairclinic@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 6:30 PM – 10:30 PM<br>Sunday: 7:30 PM – 10:30 PM (Emergency Only)</p>
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/919884094476?text=Hi%20Crown%20Pharmacy%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" class="btn btn-gold">Message Us on WhatsApp</a>
+    </div>
+    <div class="map-frame">
+      <iframe src="https://www.google.com/maps?q=No.234+Dr+Natesan+Road+Krishnampet+Triplicane+Chennai+600005&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Crown Pharmacy, Triplicane, Chennai. All rights reserved.</div>
+    <div>Made for OTC orders via <a href="https://wa.me/919884094476" target="_blank" rel="noopener">WhatsApp</a></div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/919884094476?text=Hi%20Crown%20Pharmacy%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.92 0-2.65-1.03-5.14-2.9-7.01A9.87 9.87 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.22 8.22 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.84 2.42 8.19 8.19 0 0 1 2.41 5.83c0 4.55-3.7 8.23-8.26 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.22-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.23.89 2.41 1.02 2.58.12.17 1.75 2.68 4.25 3.75.59.26 1.05.41 1.41.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"/></svg>
+</a>
+
+<script src="https://www.gstatic.com/firebasejs/12.13.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyDyGeVvvRCGE16045vOPwoUMIdoz-cO1b4",
+  authDomain: "crown-pharmacy-72513.firebaseapp.com",
+  projectId: "crown-pharmacy-72513",
+  storageBucket: "crown-pharmacy-72513.firebasestorage.app",
+  messagingSenderId: "682375365690",
+  appId: "1:682375365690:web:91cd5ca82a88aa6000e103"
+};
+
+const WA_NUMBER = "919884094476";
+
+const FALLBACK_PRODUCTS = [{"name":"Cutiwash soft","price":"419"},{"name":"Cutinix","price":"292"},{"name":"Paknet","price":"309.38"},{"name":"Nuglo","price":"320"},{"name":"Hilaro","price":"325"},{"name":"Fairshield","price":"543"},{"name":"Nevsoft","price":"267.19"},{"name":"D-Max","price":"170"},{"name":"Glufair","price":"383"},{"name":"Banac Bodywash","price":"425"},{"name":"Benzonix Gelwash","price":"275"},{"name":"CosmoQ","price":"570"},{"name":"C studart 0.5mg","price":"187"},{"name":"T.Dutaprost 0.5","price":"200"},{"name":"T.Finabald","price":"71"},{"name":"Maxirich","price":"114"},{"name":"Glutaderm Plus","price":"676"},{"name":"Saferet 5mg","price":"84"},{"name":"Saferet 10mg","price":"121"},{"name":"Saferet 20mg","price":"149"},{"name":"Levosiz10mg","price":"50"},{"name":"Lmcure-","price":"112"},{"name":"Calmzone Gummy","price":"177"},{"name":"White Up","price":"405"},{"name":"Cyclifol Hexa Female","price":"957"},{"name":"Cetalore","price":"69"},{"name":"Vertin 8mg","price":"213.69"},{"name":"Oxidox","price":"168"},{"name":"Aztor 20mg","price":"214"},{"name":"Aztor 10mg","price":"80"},{"name":"Rebaheal","price":"344"},{"name":"Atarax 50 SR","price":"238"},{"name":"Bifilac Sachet","price":"17"},{"name":"Levosiz M kid","price":"41"},{"name":"ITYZA 200","price":"236"},{"name":"Eudilage 100","price":"240"},{"name":"Supradyn","price":"68"},{"name":"Chymocip","price":"500"},{"name":"Chymoral BR","price":"339"},{"name":"Kterbimax","price":"210"},{"name":"Cipcal 500","price":"104.66"},{"name":"Lamifin Forte","price":"263"},{"name":"Lamifin 250","price":"193"},{"name":"Desosoft lotion","price":"165"},{"name":"Halatop-S","price":"380"},{"name":"Halatop-F","price":"285"},{"name":"Halo-S3","price":"180"},{"name":"A-Clin","price":"103"},{"name":"Hbsone","price":"248.44"},{"name":"Hbsalic","price":"220.31"},{"name":"Xepinoxin","price":"145.31"},{"name":"Mometamus t","price":"140"},{"name":"Momerit-F","price":"170"},{"name":"Ezimet-F","price":"253"},{"name":"MFSone","price":"215.62"},{"name":"Roxmite","price":"135"},{"name":"Calminox scalp lotion","price":"290.63"},{"name":"Nixiper lotion","price":"104"},{"name":"Calosoft plus","price":"453"},{"name":"Habeta-S lotion","price":"262"},{"name":"Halotop-S lotion","price":"464.25"},{"name":"Nevlon Anti-Itch","price":"360.5"},{"name":"Lozivate-MF lotion","price":"163"},{"name":"Moxitch","price":"199"},{"name":"Ritch lotion","price":"435"},{"name":"Aquasoft cv lotion","price":"355"},{"name":"Lulilok S","price":"90.69"},{"name":"Bricenta Gel","price":"216"},{"name":"Kojivit ultra","price":"719"},{"name":"Scarcote gel","price":"325"},{"name":"Minscalp forte","price":"84"},{"name":"Finezine 5 mg","price":"43"},{"name":"Zeredol SP","price":"139.69"},{"name":"Antiflu 75 mg","price":"906"},{"name":"B sys M","price":"75"},{"name":"Rabitor DSR","price":"103"},{"name":"Banray OSR","price":"400"},{"name":"Candiforce 200","price":"247.7"},{"name":"Niofine forte","price":"180"},{"name":"Cyclopam","price":"59.44"},{"name":"Clevira","price":"110"},{"name":"Cilacar 5mg","price":"132.17"},{"name":"Bilazap M","price":"186.56"},{"name":"Atarax 25mg","price":"106.4"},{"name":"Amlopres AT","price":"185"},{"name":"Averzine 25","price":"83"},{"name":"Atarax long","price":"58.53"},{"name":"Azithral 500","price":"125.89"},{"name":"Apexitra SB65","price":"153.8"},{"name":"Hetrazon 100","price":"53.1"},{"name":"Gabatin 100","price":"97.5"},{"name":"Gabatin 300","price":"250"},{"name":"Folvite","price":"72.58"},{"name":"Folitrax 5","price":"100.7"},{"name":"Folitrax 10mg","price":"70.98"},{"name":"Erythrocin 250","price":"62"},{"name":"Emeset-4","price":"58.57"},{"name":"Ecosprin 75","price":"5.29"},{"name":"Dolo 650","price":"32.12"},{"name":"Deplatt-CV","price":"156.6"},{"name":"Dolonex D","price":"268.79"},{"name":"Daflon 500","price":"188.73"},{"name":"Deriphyllin","price":"25.63"},{"name":"Ibugesic plus","price":"37"},{"name":"Itin A","price":"28"},{"name":"Sorbitrate 5","price":"45.83"},{"name":"Lariago","price":"14.18"},{"name":"Microcid","price":"54.5"},{"name":"Lasix 40mg","price":"15.12"},{"name":"Regen-D 60","price":"794"},{"name":"Slvrgen","price":"374"},{"name":"Acnovate","price":"317.3"},{"name":"Motimesh","price":"270.75"},{"name":"Motimesh-SF","price":"244.41"},{"name":"Chitomesh-SF","price":"105"},{"name":"Tofasure","price":"647"},{"name":"Fexit-M","price":"167"},{"name":"Fexit","price":"105"},{"name":"Herperax","price":"65"},{"name":"Afthuss","price":"98"},{"name":"Zytee","price":"120.5"},{"name":"Flonida-5%","price":"316"},{"name":"Imogaf forte cream","price":"309"},{"name":"Imograf forte lotion","price":"581"},{"name":"Setaher","price":"295"},{"name":"Mupimesh","price":"211.68"},{"name":"Mupisoft","price":"108.33"},{"name":"Metrogyl-M","price":"189.77"},{"name":"Megaheal","price":"135"},{"name":"Thrombophob","price":"240.57"},{"name":"Naftisaft","price":"514.59"},{"name":"Depiclenz","price":"325"},{"name":"Kojicure","price":"315"},{"name":"Anorelief","price":"185"},{"name":"Cosglo New","price":"692"},{"name":"Sweatex solution","price":"275"},{"name":"Glyco-6","price":"419"},{"name":"SafNAPI","price":"131.25"},{"name":"N-Clin gel","price":"110"},{"name":"Klinsoft-A","price":"163"},{"name":"Clindamust-N","price":"139"},{"name":"Nioclean AD gel","price":"201.56"},{"name":"Nioclean gel","price":"173.44"},{"name":"Clinxa","price":"187"},{"name":"Clinxa-A","price":"291"},{"name":"Nu-Whitfield","price":"103"},{"name":"Glyco 12% cream","price":"360.9"},{"name":"Top-Anc lotion","price":"495"},{"name":"DremzPlus","price":"599"},{"name":"Tufderm-S ointment","price":"186.56"},{"name":"Clozimite-MF","price":"112"},{"name":"Lozivate-MF","price":"163"},{"name":"Clomic-M cream","price":"110.61"},{"name":"Clomic-S Oinment","price":"98.18"},{"name":"Clop-S nano lotion","price":"224.06"},{"name":"Minoz gel","price":"425"},{"name":"Aziderm plus","price":"348"},{"name":"Nizoclin","price":"178"},{"name":"Tufderm cream","price":"158.62"},{"name":"Lulizol-XL Cream","price":"370.31"},{"name":"Glomycan cream","price":"289"},{"name":"Luliher cream","price":"206"},{"name":"Calitch pro lotion","price":"300"},{"name":"Zydip c lotion","price":"161"},{"name":"Atonide h cream","price":"236"},{"name":"Lilihym lotion","price":"158"},{"name":"Anaero gel","price":"168"},{"name":"Liquet ultra gel","price":"690"},{"name":"Eliva crease gel","price":"430"},{"name":"R-beclo lotion","price":"159"},{"name":"Gluta-9 cream","price":"950"},{"name":"Eternal bright lotion","price":"1900"},{"name":"Ketoze","price":"126"},{"name":"Emcloriz","price":"140"},{"name":"Lamifin","price":"230"},{"name":"Clozet","price":"136"},{"name":"Clocip(100 g)","price":"131"},{"name":"Vitroclo","price":"126"},{"name":"Clocip(75g)","price":"95"},{"name":"Fungizen","price":"164"},{"name":"Imadin","price":"127"},{"name":"KLM FX-M","price":"159"},{"name":"C.Brisc Omega","price":"146"},{"name":"C.Brisc Omega forte","price":"210"},{"name":"T.Omnix O","price":"257"},{"name":"T.Wiseglu","price":"464"},{"name":"C.Nixidox","price":"93"},{"name":"T.Follixtra Women","price":"174"},{"name":"T.Follixtra Men","price":"174"},{"name":"T.Zitahair","price":"173"},{"name":"T.Zenflox Plus","price":"168"},{"name":"T.Everactive","price":"106"},{"name":"T.Vibio","price":"130"},{"name":"T.Beltas","price":"152"},{"name":"T.Tofaris","price":"318"},{"name":"T.Beltas forte","price":"201"},{"name":"T.Bilactive","price":"89"},{"name":"T.Ternac 250","price":"145"},{"name":"T.Terme 250","price":"141"},{"name":"T.Terme 500","price":"253"},{"name":"T.Restofol","price":"191"},{"name":"T.Hista Cross L","price":"56"},{"name":"T.Bilten","price":"139"},{"name":"T.Abicort 6","price":"150"},{"name":"T.Moncit L kid","price":"70"},{"name":"T.Moncit L","price":"120"},{"name":"T.Esbila","price":"100"},{"name":"T.Levokon","price":"40"},{"name":"T.Levoher","price":"28"},{"name":"T.Bilabloc 40","price":"181"},{"name":"T.Emcet 5mg","price":"46"},{"name":"T.Calmzone plus","price":"149"},{"name":"T.Logigris 500","price":"171"},{"name":"T.Drozin 25mg","price":"47"},{"name":"T.Drozin 10mg","price":"25"},{"name":"C.Apexitra 130 SB","price":"283"},{"name":"T.Pamix","price":"694"},{"name":"C.multisol 15g","price":"165"},{"name":"T.yawin C1000","price":"112"},{"name":"T.Logihair women","price":"222"},{"name":"T.logihair men","price":"222"},{"name":"T.nopatch","price":"360 / 320"},{"name":"T.D3must 60k","price":"250"},{"name":"T.Canitiz","price":"177"},{"name":"T.Ermect plus","price":"25"},{"name":"C.Zotinea 200","price":"231"},{"name":"T.Decfil 100","price":"17"},{"name":"C.skinocean O3","price":"330"},{"name":"T.sinarest","price":"123"},{"name":"T.Rantac 300","price":"97"},{"name":"T.Rantac150","price":"50"},{"name":"T.metrogyl ER600","price":"127"},{"name":"C.Renerve plus","price":"329"},{"name":"C.atogla probio OD","price":"729"},{"name":"C.peptidor","price":"175"},{"name":"T.Griswin 500","price":"220"},{"name":"C.rantac RD","price":"80"},{"name":"C.zitcare","price":"373"},{"name":"C.adoxid L","price":"65"},{"name":"T.Ascazin","price":"81"},{"name":"T.koztafit 250","price":"149"},{"name":"T.Firmzin","price":"62"},{"name":"T.Melapik TX","price":"182"},{"name":"C.Kdox","price":"133"},{"name":"Losar 50","price":"162.25"},{"name":"Losar H","price":"311.86"},{"name":"Mprila 10","price":"273"},{"name":"Meftal Spas","price":"52"},{"name":"Microvir 500","price":"395"},{"name":"Metrogyl 400","price":"34.04"},{"name":"Telma 40 mg","price":"213"},{"name":"Neurobion Forte","price":"47.53"},{"name":"Pan 40","price":"187"},{"name":"Prolomet XL 50","price":"93.55"},{"name":"Wysolone 10","price":"19.02"},{"name":"Senosof 10","price":"170"},{"name":"Stugeron 25","price":"261"},{"name":"T. Glim M","price":"132"},{"name":"Age-Q","price":"1900"},{"name":"Faireye","price":"999"},{"name":"Xoerts Undereye gel","price":"1390"},{"name":"Follihair RCP","price":"2079"},{"name":"Ridacne SA","price":"699"},{"name":"Renewderm HA","price":"799"},{"name":"Groxtra RCP","price":"1500"},{"name":"Hairbless","price":"1450"},{"name":"iMxia Pro","price":"1355"},{"name":"Zerum AZ","price":"1450"},{"name":"Elivia NBR","price":"790"},{"name":"Omnigain M","price":"937"},{"name":"Curlzmin-AT 5%","price":"839"},{"name":"H-Vit","price":"975"},{"name":"Q-Sera","price":"1650"},{"name":"Chekfall","price":"862.49"},{"name":"MPower F","price":"1123"},{"name":"MPower 5%","price":"1123.03"},{"name":"Terraglow","price":"720"},{"name":"Minscalp F Max","price":"1310"},{"name":"Q-Sera Black","price":"1425"},{"name":"Tyrodin","price":"820"},{"name":"Grow-XL Advance","price":"1400"},{"name":"Stactiv","price":"1550"},{"name":"La-Matisse","price":"1720"},{"name":"Retiglow Night","price":"1170"},{"name":"Densyl-P","price":"1400"},{"name":"C-Bliz","price":"860"},{"name":"Facemoist RES-Q serum","price":"1290"},{"name":"Growcare Hair oil","price":"220"},{"name":"Nugrow hair oil","price":"250"},{"name":"BD PRO MAX Advance","price":"1449"},{"name":"Solnil","price":"550"},{"name":"ekran MS","price":"810"},{"name":"Solecross","price":"513"},{"name":"Suncros neo","price":"850"},{"name":"UV-Grand","price":"672"},{"name":"ekran-30","price":"455"},{"name":"UVBreak","price":"850"},{"name":"Radiban nano gel","price":"660"},{"name":"Cuvia","price":"272"},{"name":"UVBroad LS","price":"590"},{"name":"Tyrodin body lotion","price":"750"},{"name":"Solaban","price":"660"},{"name":"Sunkon 30 cream","price":"285"},{"name":"Cosmo Q Ac","price":"555"},{"name":"Litearm","price":"742.5"},{"name":"Glowriance","price":"890"},{"name":"Photofirst","price":"1815"},{"name":"No patch gel","price":"1400"},{"name":"Glowel","price":"470"},{"name":"Raywart solution","price":"167"},{"name":"Lozisoft","price":"342"},{"name":"Salex-L","price":"230"},{"name":"Halotop NL","price":"210"},{"name":"Salactin","price":"512"},{"name":"Ahanext 12%","price":"515"},{"name":"Depimedultra","price":"685"},{"name":"Bekon-c","price":"131.25"},{"name":"Hifuzz-B","price":"150"},{"name":"Zydip-C cream","price":"150"},{"name":"Zydip lotion","price":"192.18"},{"name":"EmCloriz B","price":"140"},{"name":"Niogenta-F","price":"253.13"},{"name":"Atogla Probio Sachet","price":"620"},{"name":"Trunex MS","price":"226.5"},{"name":"Retisphere 0.04% gel","price":"283"},{"name":"Topitret-0.025%","price":"131"},{"name":"Folitrax LP","price":"347"},{"name":"Lamifin-M","price":"163"},{"name":"Desosoft cream","price":"140.63"},{"name":"B sys 10","price":"51.56"},{"name":"Levokon m 10","price":"100"},{"name":"Levosiz 5 mg 10","price":"30.93"},{"name":"AF 400 1","price":"27.37"},{"name":"Terbirox 500 mg 10","price":"260"},{"name":"Pregaba NT 10","price":"274.2"},{"name":"Bilahym 20 10","price":"84"},{"name":"Acitin25 10","price":"534"},{"name":"T Defence 10","price":"700"},{"name":"Lamifin 125DT 10","price":"139"},{"name":"Dopazin 10 10","price":"199"},{"name":"Levosiz M 15","price":"101"},{"name":"Ubest 20 10","price":"150"},{"name":"Lejet M 10","price":"121"},{"name":"Lejet 10","price":"28"},{"name":"Hemogyl D 10","price":"120"},{"name":"Pedomax 10","price":"178"},{"name":"Extend Gold 10","price":"146"},{"name":"Augmentin 375 10","price":"259.64"},{"name":"Augmentin 625 10","price":"195.39"},{"name":"Terbirox 250mg 10","price":"130"},{"name":"Canitiz 10","price":"169"},{"name":"Vono 10 10","price":"84"},{"name":"Calzone D3 60 K 4","price":"122"},{"name":"Bilahym 40 10","price":"140"},{"name":"Histabil 10","price":"139.69"},{"name":"Sealz 10","price":"190"},{"name":"FG Plus 10","price":"160"},{"name":"Doxy vera LB 10","price":"120.9"},{"name":"Candiforce 130SB 10","price":"271"},{"name":"Niofine 250mg 7","price":"150"},{"name":"Betadine solution","price":"102"},{"name":"Betadine gargle","price":"313"},{"name":"Candid mouth paint","price":"184"},{"name":"Esiflo 250 Transhaler","price":"896"},{"name":"Fenlong liniment","price":"60"},{"name":"Antiflu75 mg","price":"906"},{"name":"B sys","price":"51.56"},{"name":"Levokon m","price":"100"},{"name":"Levosiz 5 mg","price":"30.93"},{"name":"AF 400","price":"27.37"},{"name":"Terbirox 500 mg","price":"260"},{"name":"Pregaba NT","price":"274.2"},{"name":"Bilahym 20","price":"84"},{"name":"Acitin25","price":"534"},{"name":"T Defence","price":"700"},{"name":"Lamifin 125DT","price":"139"},{"name":"Dopazin 10","price":"199"},{"name":"Levosiz M LM22","price":"101"},{"name":"Ubest 20","price":"150"},{"name":"Lejet M","price":"121"},{"name":"Lejet","price":"28"},{"name":"Hemogyl D","price":"120"},{"name":"Pedomax","price":"178"},{"name":"Extend Gold","price":"146"},{"name":"Augmentin 375","price":"259.64"},{"name":"Augmentin 625","price":"195.39"},{"name":"Terbirox 250mg","price":"130"},{"name":"Canitiz","price":"169"},{"name":"Vono 10","price":"84"},{"name":"Calzone D3 60 K","price":"122"},{"name":"Bilahym 40","price":"140"},{"name":"Histabil","price":"139.69"},{"name":"Sealz","price":"190"},{"name":"FG Plus","price":"160"},{"name":"Doxy vera LB","price":"120.9"},{"name":"Candiforce 130SB","price":"271"},{"name":"Niofine 250mg","price":"150"},{"name":"Closyn bar","price":"169"},{"name":"Ketoff soap","price":"142.4"},{"name":"D Max soap","price":"135"},{"name":"Ketodaily Ds","price":"110"},{"name":"Endew bar","price":"124"},{"name":"Zavet bar","price":"133"},{"name":"Terraglo soap","price":"170"},{"name":"Nixiper","price":"98"},{"name":"Kiyato-G","price":"177"},{"name":"Roxketo","price":"133"},{"name":"Nuforce","price":"117"},{"name":"KETOSOAP","price":"117"},{"name":"K Zoft","price":"135"},{"name":"ZIT OUT","price":"170"},{"name":"KETAFUNG","price":"155.72"},{"name":"CUZRAL","price":"117"},{"name":"NEVLON","price":"160.17"},{"name":"ONON","price":"129"},{"name":"KLMITE","price":"133.47"},{"name":"Sofibar","price":"195"},{"name":"Klm klin","price":"142"},{"name":"Emketo","price":"140"},{"name":"Zykt","price":"163.92"},{"name":"Skinocean","price":"135"},{"name":"FAIRSOME","price":"180"},{"name":"Bensoft","price":"124.57"},{"name":"Ketomark","price":"130"},{"name":"Hexsyn","price":"146.82"},{"name":"Mandalin","price":"200.21"},{"name":"Acnegate","price":"162.83"},{"name":"Tinkle","price":"142"},{"name":"Ketosol","price":"137"}]
+;
+
+/* ------------------------------------------------------------
+   Live catalog — synced from the admin panel via Firebase.
+   FALLBACK_PRODUCTS above stays as a safety net: if Firebase
+   isn't configured yet, or the connection drops, the site keeps
+   working off that built-in list instead of breaking.
+   ------------------------------------------------------------ */
+let PRODUCTS = FALLBACK_PRODUCTS;
+
+(function syncCatalog(){
+  const isConfigured = firebaseConfig.apiKey && !firebaseConfig.apiKey.startsWith("YOUR_");
+  if(!isConfigured){
+    console.info("Crown Pharmacy: Firebase not configured yet — using the built-in product list.");
+    return;
+  }
+  try{
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.collection("medicines").onSnapshot(
+      (snap) => {
+        if(!snap.empty){
+          PRODUCTS = snap.docs.map(d => {
+            const v = d.data();
+            return { name: v.name, price: String(v.price) };
+          });
+        }
+        renderSuggestions(productSelect.value);
+      },
+      (err) => console.warn("Crown Pharmacy: live catalog unavailable, using built-in list.", err)
+    );
+  }catch(err){
+    console.warn("Crown Pharmacy: Firebase init failed, using built-in list.", err);
+  }
+})();
+
+
+const productSelect = document.getElementById('productSelect');
+const productSuggestions = document.getElementById('productSuggestions');
+const selectedChip = document.getElementById('selectedChip');
+const selectedChipName = document.getElementById('selectedChipName');
+const selectedChipPrice = document.getElementById('selectedChipPrice');
+const qtyValue = document.getElementById('qtyValue');
+const qtyMinus = document.getElementById('qtyMinus');
+const qtyPlus = document.getElementById('qtyPlus');
+const addProductBtn = document.getElementById('addProductBtn');
+
+const orderEmpty = document.getElementById('orderEmpty');
+const orderList = document.getElementById('orderList');
+const patientNameInput = document.getElementById('patientNameInput');
+const mobileInput = document.getElementById('mobileInput');
+const sendOrderBtn = document.getElementById('sendOrderBtn');
+const clearOrderBtn = document.getElementById('clearOrderBtn');
+
+let currentProduct = null; // {name, price}
+let qty = 1;
+let order = []; // [{name, price, qty}]
+
+/* ---------- Step 1: product search / suggestions ---------- */
+function renderSuggestions(filter){
+  const q = (filter || '').trim().toLowerCase();
+  // Only show a suggestion once the customer has typed a product's full,
+  // exact name — no dropdown at all while they're still typing it out.
+  const matches = q ? PRODUCTS.filter(p => p.name.toLowerCase() === q).slice(0, 40) : [];
+  if(matches.length === 0){
+    productSuggestions.classList.remove('open');
+    productSuggestions.innerHTML = '';
+    return;
+  }
+  productSuggestions.innerHTML = matches.map(p =>
+    `<div class="suggestion-item" data-name="${p.name.replace(/"/g,'&quot;')}" data-price="${p.price}">
+      <span>${p.name}</span><b>MRP ₹${p.price}</b>
+    </div>`
+  ).join('');
+  productSuggestions.classList.add('open');
+}
+
+productSelect.addEventListener('input', () => renderSuggestions(productSelect.value));
+productSelect.addEventListener('focus', () => { if(productSelect.value) renderSuggestions(productSelect.value); });
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.product-select-wrap')) productSuggestions.classList.remove('open');
+});
+
+productSuggestions.addEventListener('click', (e) => {
+  const item = e.target.closest('.suggestion-item');
+  if(!item || !item.dataset.name) return;
+  selectProduct(item.dataset.name, item.dataset.price);
+  productSuggestions.classList.remove('open');
+});
+
+function selectProduct(name, price){
+  currentProduct = { name, price };
+  productSelect.value = name;
+  selectedChipName.textContent = name;
+  selectedChipPrice.textContent = `MRP ₹${price}`;
+  selectedChip.classList.add('show');
+  addProductBtn.disabled = false;
+}
+
+/* ---------- Step 2: quantity ---------- */
+function setQty(n){
+  qty = Math.max(1, n);
+  qtyValue.textContent = qty;
+}
+qtyMinus.addEventListener('click', () => setQty(qty - 1));
+qtyPlus.addEventListener('click', () => setQty(qty + 1));
+
+/* ---------- Step 3: add product ---------- */
+addProductBtn.addEventListener('click', () => {
+  if(!currentProduct) return;
+  const existing = order.find(o => o.name === currentProduct.name);
+  if(existing){
+    existing.qty += qty;
+  } else {
+    order.push({ name: currentProduct.name, price: currentProduct.price, qty });
+  }
+  renderOrder();
+  // reset step 1 & 2
+  currentProduct = null;
+  productSelect.value = '';
+  selectedChip.classList.remove('show');
+  addProductBtn.disabled = true;
+  setQty(1);
+});
+
+/* ---------- Order panel ---------- */
+const orderTotal = document.getElementById('orderTotal');
+const orderTotalValue = document.getElementById('orderTotalValue');
+
+function fmtAmount(n){
+  const r = Math.round(n * 100) / 100;
+  return r % 1 === 0 ? String(r) : r.toFixed(2);
+}
+
+function renderOrder(){
+  if(order.length === 0){
+    orderEmpty.style.display = 'block';
+    orderList.innerHTML = '';
+    orderTotal.classList.remove('show');
+    sendOrderBtn.classList.add('disabled');
+    return;
+  }
+  orderEmpty.style.display = 'none';
+  sendOrderBtn.classList.remove('disabled');
+  let grandTotal = 0;
+  orderList.innerHTML = order.map((o, i) => {
+    const subtotal = parseFloat(o.price) * o.qty;
+    grandTotal += subtotal;
+    return `
+    <div class="order-item">
+      <div>
+        <div class="order-item-name">${o.name}</div>
+        <div class="order-item-meta">Qty ${o.qty} × MRP ₹${o.price} = ₹${fmtAmount(subtotal)}</div>
+      </div>
+      <button class="order-item-remove" data-index="${i}" aria-label="Remove">&times;</button>
+    </div>
+  `;
+  }).join('');
+  orderTotal.classList.add('show');
+  orderTotalValue.textContent = `₹${fmtAmount(grandTotal)}`;
+  updateSendLink();
+}
+
+orderList.addEventListener('click', (e) => {
+  const btn = e.target.closest('.order-item-remove');
+  if(!btn) return;
+  order.splice(Number(btn.dataset.index), 1);
+  renderOrder();
+});
+
+function updateSendLink(){
+  const lines = ["Hi Crown Pharmacy, I'd like to order:", ""];
+  let grandTotal = 0;
+  order.forEach((o, i) => {
+    const subtotal = parseFloat(o.price) * o.qty;
+    grandTotal += subtotal;
+    lines.push(`${i+1}. ${o.name} x${o.qty} (MRP Rs.${o.price} each) = Rs.${fmtAmount(subtotal)}`);
+  });
+  lines.push("");
+  lines.push(`Total: Rs.${fmtAmount(grandTotal)}`);
+  const patientName = patientNameInput.value.trim();
+  const mobile = mobileInput.value.trim();
+  if(patientName) lines.push(`Patient Name: ${patientName}`);
+  if(mobile) lines.push(`Mobile Number: ${mobile}`);
+  lines.push("");
+  lines.push("Please confirm availability. Thank you!");
+  const message = encodeURIComponent(lines.join("\n"));
+  sendOrderBtn.href = `https://wa.me/${WA_NUMBER}?text=${message}`;
+}
+
+[patientNameInput, mobileInput].forEach(el => el.addEventListener('input', updateSendLink));
+
+clearOrderBtn.addEventListener('click', () => {
+  order = [];
+  patientNameInput.value = '';
+  mobileInput.value = '';
+  renderOrder();
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+renderOrder();
+</script>
+</body>
+</html>
